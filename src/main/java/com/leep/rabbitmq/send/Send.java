@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * Producer - example1
+ */
 @Component
 public class Send {
 
@@ -23,7 +26,7 @@ public class Send {
             factory.setHost("localhost");
             factory.setPort(5672);
             factory.setUsername("admin");
-            factory.setPassword("1234");
+            factory.setPassword("asdf!234");
 //            factory.setAutomaticRecoveryEnabled(true);
 //            factory.setShutdownTimeout(10000);
 //            factory.setRequestedHeartbeat(60);

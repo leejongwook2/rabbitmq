@@ -7,7 +7,9 @@ import com.rabbitmq.client.DeliverCallback;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
-
+/**
+ * Consumer - example1
+ */
 public class Recv {
 
     private final static String QUEUE_NAME = "rabbit";
