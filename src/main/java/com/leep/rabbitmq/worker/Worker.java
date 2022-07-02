@@ -69,10 +69,11 @@ class MyThread extends Thread {
                 } finally {
                     // doWork를 실행 한 후
                     System.out.println(num + " [x] Done");
-                    channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                    // 데이터를 수령하는 코드
+                    // channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
                 }
             };
-            //Done을 출력하고 큐에게 확인 메세지를 보낸다.
+            //Done을 출력하고 큐에게 확인 메세지를 보낸다. (데이터의 승인을 대한 신호를 큐에 알린다)
             channel.basicConsume(TASK_QUEUE_NAME, false, deliverCallback, consumerTag -> {
             });
         } catch (IOException e) {
